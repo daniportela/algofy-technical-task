@@ -1,0 +1,191 @@
+/************ Simple reset ************/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway";
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/************ Header ************/
+header {
+    width: 100%;
+    height: 80px;
+    padding-inline: 30px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+header img {
+    height: 60%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+li a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+/************ Hero ************/
+main {
+    min-height: 60dvh;
+    background-color: beige;
+    display: grid;
+    text-align: center;
+    align-content: center;
+}
+
+h1 {
+    font-size: 3.6rem;
+    font-weight: 800;
+}
+
+.typewriter {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.typewriter h2 {
+    font-size: 2rem;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    padding-right: 10px;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+/************ About ************/
+.about {
+    display: grid;
+    grid-template-columns: 10dvw repeat(2, minmax(0, 1fr)) 10dvw;
+    align-items: center;
+    column-gap: 6dvw;
+}
+
+.about-info {
+    grid-column: 2;
+}
+
+.about img {
+    grid-column: 3;
+}
+
+.description {
+    height: 100px;
+    overflow: hidden;
+}
+
+/************ Contact ************/
+.contact {
+    height: 50dvh;
+    display: grid;
+    place-content: center;
+    background-color: beige;
+}
+
+.contact h3 {
+    text-align: center;
+}
+
+form {
+    width: 35dvw;
+    margin: auto;
+}
+
+.form-control {
+    margin-top: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 0;
+    padding-left: 15px;
+    font-size: .9rem;
+}
+
+input {
+    height: 40px;
+}
+
+textarea {
+    height: 200px;
+    padding-top: 15px;
+}
+
+.submit {
+    float: right;
+    padding: 8px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
+
+/************ Media Queries ************/
+@media screen and (width < 768px) {
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 30%;
+        background-color: steelblue;
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition:  transform .3s ease-in;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        background: red;
+        width: 1rem;
+        border: 0;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        z-index: 9999;
+    }
+}
