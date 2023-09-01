@@ -24,8 +24,12 @@ git clone https://github.com/daniportela/algofy-technical-task.git
 ```
 cd algofy-technical-task
 ```
-3. Spin up the server.
+3. Install dependencies
+```
+npm install
+```
+4. Spin up the server.
 ```
 node server
 ```
-4. Finally, in your desired browser, go to http://localhost:5000. The app should be running.
+5. Finally, in your desired browser, go to http://localhost:5000. The app should be running.
