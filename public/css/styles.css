@@ -50,6 +50,8 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: var(--clr-main);
 }
 
@@ -78,6 +80,7 @@ li a {
 /************ Hero ************/
 main {
     min-height: 60dvh;
+    margin-top: 80px;
     display: grid;
     text-align: center;
     align-content: center;
