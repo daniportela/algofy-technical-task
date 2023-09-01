@@ -32,4 +32,8 @@ npm install
 ```
 node server
 ```
+<<<<<<< HEAD
 5. Finally, in your desired browser, go to http://localhost:5000. The app should be running.
+=======
+5. Finally, in your desired browser, go to http://localhost:5000. The app should be running.
+>>>>>>> 60c87405446c6b4b20eb27f97f3c5cd6c68c3329
