@@ -1,12 +1,26 @@
 [
     {
-        "title": "Nova e-commerce",
-        "description": "Next.js e-commerce",
-        "link": "https://github.com"
+        "title": "AI Icon Generator",
+        "description": "Icon generator using OpenAI API. Images are stored as binaries in an S3 Bucket. Integrated Stripe for payments.",
+        "image": "/img/aicon.jpg",
+        "link": "https://github.com/daniportela/ai-icon-generator"
     },
     {
         "title": "Flashpic",
-        "description": "Image sharing platform",
-        "link": "https://github.com"
+        "description": "Image sharing social media app. Created with React for the front-end and Sanity for easy content management.",
+        "image": "/img/flashpic.jpg",
+        "link": "https://github.com/daniportela/flashpic"
+    },
+    {
+        "title": "Nova e-commerce",
+        "description": "E-commerce app with Next.js + Sanity for content and Stripe for processing payments.",
+        "image": "/img/nova.jpg",
+        "link": "https://github.com/daniportela/nova-ecommerce"
+    },
+    {
+        "title": "Trius e-commerce",
+        "description": "One of my first apps created. E-commerce platform done using React for the front-end and Node + MongoDB for backend logic and database.",
+        "image": "/img/trius.jpg",
+        "link": "https://github.com/daniportela/trius-ecommerce"
     }
 ]

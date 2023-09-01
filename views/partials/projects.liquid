@@ -1,0 +1,15 @@
+<section id="mywork" class="projects">
+    <h3>My work</h3>
+    <div class="card-wrapper">
+        {% for project in projects %}
+            <div class="project-card">
+                <img src="{{ project.image }}" alt="{{ project.title }}">
+                <div class="project-info">
+                    <h4>{{ project.title }}</h4>
+                    <p>{{ project.description | truncatewords: 15 }}</p>
+                    <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

@@ -15,40 +15,55 @@
             <img src="img/logo.svg" class="logo" alt="logo">
     
             <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="sr-only">Menu</span>
+                <span class="sr-only"></span>
             </button>
             <nav>
                 <ul id="primary-navigation" class="primary-navigation" data-visible="false">
                     <li>
-                        <a href="">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="#mywork">My work</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
         </header>
     
-        <main>
+        <main id="home">
             <h1>Hi! 👋 I'm Dani</h1>
             <div class="typewriter">
                 <h2>Front-end Developer</h2>
             </div>
         </main>
         
-        <section class="about">
+        <section id="about" class="about">
             <div class="about-info">
-                <h2>About me</h2>
-                <p class="description">Designer with a passion for developing beautiful, user-friendly applications. Proficient in both front-end and back-end, with expertise in JavaScript, React, Node.js, and MongoDB. <br> Skilled in creating performant responsive designs that prioritize accessibility. Furthermore, I'm no stranger to OOP and RESTful principles. Familiar with Agile development methodologies and version control systems like Git. Used to working collaboratively with teams to deliver high-quality projects. Let's build something great together!</p>
+                <h3>About me</h3>
+                <p class="description">
+                    Designer with a passion for developing beautiful, user-friendly applications. Proficient in both front-end and back-end, with expertise in JavaScript, React, Node.js, and MongoDB.
+                    <br>
+                    <br>
+                    Skilled in creating performant responsive designs that prioritize accessibility. Furthermore, I'm no stranger to OOP and RESTful principles. Familiar with Agile development methodologies and version control systems like Git.
+                    <br>
+                    <br>
+                    Used to working collaboratively with teams to deliver high-quality projects. Let's build something great together!
+                </p>
                 <button class="readmore">Read more</button>
             </div>
             <img src="img/profile.png" alt="dani">
         </section>
-    
-        <section class="contact">
+        
+        {% if projects %}
+            {% include "partials/projects" %}
+        {% endif %}
+
+        <section id="contact" class="contact">
             <h3>Get in touch</h3>
     
             <form>
