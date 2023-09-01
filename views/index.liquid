@@ -12,7 +12,9 @@
     </head>
     <body>
         <header>
-            <img src="img/logo.svg" class="logo" alt="logo">
+            <a href="#home">
+                <img src="img/logo.svg" class="logo" alt="logo">
+            </a>
     
             <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                 <span class="sr-only"></span>
@@ -20,14 +22,13 @@
             <nav>
                 <ul id="primary-navigation" class="primary-navigation" data-visible="false">
                     <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
                         <a href="#about">About</a>
                     </li>
+                    {% if projects.size > 0 %}
                     <li>
                         <a href="#mywork">My work</a>
                     </li>
+                    {% endif %}
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
@@ -59,7 +60,7 @@
             <img src="img/profile.png" alt="dani">
         </section>
         
-        {% if projects %}
+        {% if projects.size > 0 %}
             {% include "partials/projects" %}
         {% endif %}
 

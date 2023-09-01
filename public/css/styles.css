@@ -53,8 +53,8 @@ header {
     background-color: var(--clr-main);
 }
 
-header img {
-    height: 50%;
+header a img {
+    height: 40px;
 }
 
 ul {
